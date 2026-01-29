@@ -16,12 +16,8 @@ pipeline {
           rm -rf "${BUILD_DIR}"
           mkdir -p "${BUILD_DIR}"
 
-          # Workspace zaten repo'nun kendisi (Jenkins checkout yaptı)
-          # Statik dosyaları build-output'a kopyala
-          cp -a . "${BUILD_DIR}/"
-
-          # İstersen Jenkinsfile'ı taşımayıp temiz tutalım:
-          rm -f "${BUILD_DIR}/Jenkinsfile" || true
+          # Sadece statik dosyaları al (kendini kopyalama hatası biter)
+          cp -a index.html assets "${BUILD_DIR}/"
         """
       }
     }
