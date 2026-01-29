@@ -22,7 +22,7 @@ pipeline {
                         passwordVariable: 'GIT_PASSWORD'
                     )]) {
                         sh """
-                            git clone --branch main https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/beyribey.git ${REPO_DIR}
+                            git clone --branch main https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/KursadBaygul/beyribey.git ${REPO_DIR}
                         """
                     }
                 }
